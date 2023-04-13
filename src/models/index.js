@@ -1,4 +1,6 @@
 'use strict';
+//add a usser model and use it here
+// - from auth / models / users
 
 const { Sequelize, DataTypes } = require('sequelize');
 const clothesModel = require('./clothes/model.js');
