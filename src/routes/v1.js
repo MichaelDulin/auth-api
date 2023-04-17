@@ -1,7 +1,7 @@
 'use strict';
 
 const express = require('express');
-const dataModules = require('../models');
+const dataModules = require('../models/modelIndex');
 
 const router = express.Router();
 
@@ -48,6 +48,7 @@ async function handleUpdate(req, res) {
 async function handleDelete(req, res) {
   let id = req.params.id;
   let deletedRecord = await req.model.delete(id);
+console.log(deletedRecord);
   res.status(200).json(deletedRecord);
 }
 

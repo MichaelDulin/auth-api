@@ -31,7 +31,10 @@ class DataCollection {
   delete(id) {
     return this.model.destroy({ where: { id }});
   }
-
+  patch(id){
+    return this.model.findOne({ where: { id } })
+    .then(record => record.update(data));
+  }
 }
 
 module.exports = DataCollection;
